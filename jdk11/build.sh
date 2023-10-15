@@ -2,11 +2,17 @@
 
 if [ "$1" = "" ]
 then
-    echo "no argument"
-    exit
+    echo "You need to specify the location of the JDK source"
+    exit 1
 fi
 
 JDK_SOURCE=$1
+
+if [ ! -d src/$JDK_SOURCE ]
+then 
+    echo "$JDK_SOURCE not found"
+    exit 1
+fi
 
 # clean up
 rm -rf build
