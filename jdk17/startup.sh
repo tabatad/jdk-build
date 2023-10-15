@@ -1,4 +1,5 @@
-git clone https://github.com/openjdk/jdk17u-dev.git
-cd jdk17u-dev
+#!/bin/bash
+
+cd /src/$JDK_SOURCE
 bash configure
 make images

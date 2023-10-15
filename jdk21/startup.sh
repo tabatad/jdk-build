@@ -1,4 +1,5 @@
-git clone https://github.com/openjdk/jdk21u.git
-cd jdk21u
+#!/bin/bash
+
+cd /src/$JDK_SOURCE
 bash configure
 make images

@@ -35,5 +35,3 @@ RUN apt-get update \
     && ln -sf /usr/local/lib/bootjdk/bin/javac /usr/bin/javac \
     && ln -sf /usr/local/lib/bootjdk/bin/keytool /usr/bin/keytool \
     && chmod 744 /startup.sh
-
-CMD /startup.sh
