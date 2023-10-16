@@ -28,9 +28,9 @@ RUN apt-get update \
     && apt-get clean -y \ 
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /usr/local/lib/bootjdk \
-    && wget -q https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz \
-    && tar xzf jdk-21_linux-x64_bin.tar.gz -C /usr/local/lib/bootjdk --strip-components=1 \
-    && rm jdk-21_linux-x64_bin.tar.gz \
+    && wget -q https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21%2B35/OpenJDK21U-jdk_x64_linux_hotspot_21_35.tar.gz \
+    && tar xzf OpenJDK21U-jdk_x64_linux_hotspot_21_35.tar.gz -C /usr/local/lib/bootjdk --strip-components=1 \
+    && rm OpenJDK21U-jdk_x64_linux_hotspot_21_35.tar.gz \
     && ln -sf /usr/local/lib/bootjdk/bin/java /usr/bin/java \
     && ln -sf /usr/local/lib/bootjdk/bin/javac /usr/bin/javac \
     && ln -sf /usr/local/lib/bootjdk/bin/keytool /usr/bin/keytool \
